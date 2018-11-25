@@ -1,0 +1,60 @@
+header {
+	margin: 60px;
+	font-size: 45px;
+	background: #0000;
+	color:#fff;
+}
+html,body {
+	margin: 0;
+	padding: 0;
+
+}
+.main{
+	background-image: url(../img/fondo.jpg);
+	overflow: hidden;
+}
+
+.color1 {
+	background: #34495e;
+	color:#fff;
+}
+aside {
+	background: #c0392b;
+	color:#fff;
+}
+
+.boton {
+	margin: 50px 100px 100px 850px;
+
+
+}
+footer {
+	margin: 100px;
+	font-size: 20px;
+	background: #0000;
+	color:#fff;
+}
+footer .sociales a{
+  font-size: 35px;
+  color: #fff;
+  transition: all .5s ease;
+}
+
+footer .sociales .facebook:hover{
+  transform: scale(1.5,1.5);
+  color: #2759BE;
+}
+
+footer .sociales .twitter:hover{
+  transform: scale(1.5,1.5);
+  color: #2161A3;
+}
+
+footer .sociales .instagram:hover{
+  transform: scale(1.5,1.5);
+  color: #9433A6;
+}
+
+footer .sociales .youtube:hover{
+  transform: scale(1.5,1.5);
+  color: #CD2E2E;
