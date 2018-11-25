@@ -4,7 +4,7 @@
 
 }
 p {
-  margin-bottom: 20px;
+
 }
 .wrapper {
   width: 80%;
@@ -12,13 +12,14 @@ p {
   overflow:hidden;
 }
 body{
-	background-image: url(fondo.jpg);
+	background-image: url(img/fondo.jpg);
 }
 header {
   background: rgba(0,0,0,0.9);
   width: 100%;
   position: fixed;
   z-index: 10;
+  top: 60px;
 }
 
 nav {
@@ -47,4 +48,40 @@ nav ul li:hover {
 .contenido {
   padding-top: 80px;
 }
+
+.sidebar{
+	position: fixed;
+	background: #2c2c2c;
+	color: aliceblue;
+	z-index: 1000;
+	bottom: 0;
+	top: 133px;
+	padding: .5em;
+	overflow: hidden;
+	left: 6px;
+	font-size: 14px;
+	text-align: center;
+}
+
+table{
+	top: 133px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
