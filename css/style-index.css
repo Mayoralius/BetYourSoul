@@ -33,7 +33,25 @@
   margin-left: 10%;
   margin-right: 10%;
   max-width: 100%;
-
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  white-space: normal;
+}
+.section1 .row .col .btn:hover{background-color: #3e8e41}
+.section1 .row .col .btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .section2 {
@@ -43,18 +61,56 @@
   min-height 700px;
   box-shadow: 2px 2px 5px #000;
 }
-.section2 .container .row .accordion .card .card-header .mb-0 .btn{
+
+.section2 .container .row .accordion .card .collapse .card-body p{
   color: #ffffff;
   font: 15px arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.section2 .container .row .accordion .card .collapse .card-body p img{
+  padding-bottom: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  position:  sticky;
+  width: 301px;
+  height: 175px;
+  border-radius: 20%;
+}
+
+.section2 .container .row .accordion .card .card-header .mb-0 .btn{
+  color: #ffffff;
+  font: 25px arial, sans-serif;
+  font-weight: 800;
+  text-decoration:none;
 }
 .section2 .container .row .accordion .card .card-header .mb-0 .btn:hover{
   color: #292c2f;
-  font: 15px arial, sans-serif;
+  font: 25px arial, sans-serif;
+  font-weight: 800;
+  text-decoration:none;
 }
 
 .section2 .container .row .accordion .card .card-header .mb-0 .btn:active{
   color: #292c2f;
-  font: 15px arial, sans-serif;
+  font: 25px arial, sans-serif;
+  font-weight: 800;
+  text-decoration:none;
+}
+
+.section2 .container .row .accordion .card .card-header .mb-0 .btn:visited{
+  color: #292c2f;
+  font: 25px arial, sans-serif;
+  font-weight: 800;
+  text-decoration:none;
+}
+
+.section2 .container .row .accordion .card .card-header .mb-0 .btn:link{
+  color: #292c2f;
+  font: 25px arial, sans-serif;
+  font-weight: 800;
+  text-decoration:none;
 }
 
 .footer-distributed{
