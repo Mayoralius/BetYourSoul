@@ -18,8 +18,15 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- GOOGLE TRADUCTOR SCRIPT -->
+    <div id="google_translate_element"></div><script type="text/javascript">
+	function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en,es,fr,it', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+	}
+	</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
       <div class="container">
-        <a title="index" href="file:index.html"><img src="img/logo.jpg" style="width: 60px; margin-top: 30px;" /></a>
+        <a title="index" href="intro.html"><img src="img/logo.jpg" style="width: 60px; margin-top: 30px;" /></a>
         <span class="navbar-toggler-icon"></span>
         <div class="navbar navbar-dark">
           <div class="container">
@@ -40,13 +47,13 @@
                   <li><a href="#">Apuestas Live</a></li>
                   <li><a href="#">Guia de Apuestas Live</a></li>
                   <li><a href="#">Promociones</a></li>
-                  <li><a href="#" onclick="location.href='file:index.html'">Volver</a></li>
+                  <li><a href="#" onclick="location.href='intro.html'">Volver</a></li>
               </ul>
             </div>
         </nav>
     </section>
   </header>
-  
+
   <div class = "container-fluid responsive">
 	<div class = "row">
 		<div class = "col-md-2">
@@ -134,7 +141,7 @@
   </div>
 
 
-   
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery.js"></script>
