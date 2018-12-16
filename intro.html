@@ -16,18 +16,67 @@
   <link rel="stylesheet" href="css/style-index.css">
   <!--BOOTSTRAP CSS-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- If the mobile does not use the standart web page-->
+    <script type="text/javascript">
+    //<![CDATA[
+    if((navigator.userAgent.match(/MSIE/i)) || (navigator.userAgent.match(/Googlebot/i)) || (navigator.userAgent.match(/Chrome/i)) || (navigator.userAgent.match(/Firefox/i))) {""} else {
+    document.write('<style type="text/css" media="screen">#sidebar,#menu{display:none;}#page{width:99%;}#content{width:99%;}</style>');}
+    //]]>
+    </script>
+    <!-- Obtain the position of the user-->
+    <script> 
+    (function(){
+  var content = document.getElementById("geolocation-test");
+
+  if (navigator.geolocation)
+  {
+    navigator.geolocation.getCurrentPosition(function(objPosition)
+    {
+      var lon = objPosition.coords.longitude;
+      var lat = objPosition.coords.latitude;
+
+      content.innerHTML = "<p><strong>Latitud:</strong> " + lat + "</p><p><strong>Longitud:</strong> " + lon + "</p>";
+
+    }, function(objPositionError)
+    {
+      switch (objPositionError.code)
+      {
+        case objPositionError.PERMISSION_DENIED:
+          content.innerHTML = "No se ha permitido el acceso a la posición del usuario.";
+        break;
+        case objPositionError.POSITION_UNAVAILABLE:
+          content.innerHTML = "No se ha podido acceder a la información de su posición.";
+        break;
+        case objPositionError.TIMEOUT:
+          content.innerHTML = "El servicio ha tardado demasiado tiempo en responder.";
+        break;
+        default:
+          content.innerHTML = "Error desconocido.";
+      }
+    }, {
+      maximumAge: 75000,
+      timeout: 15000
+    });
+  }
+  else
+  {
+    content.innerHTML = "Su navegador no soporta la API de geolocalización.";
+  }
+})();</script>
+
 </head>
 
 <body>
+
   <!-- NAVIGATION -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-    <!-- GOOGLE TRADUCTOR SCRIPT -->
+    <!-- GOOGLE TRADUCTOR SCRIPT 
     <div id="google_translate_element"></div><script type="text/javascript">
-	function googleTranslateElementInit() {
-	new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en,es,fr,it', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-	}
-	</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en,es,fr,it', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+  }
+  </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
 
 
     <div class="container">
@@ -105,7 +154,7 @@
       </div>
 
       <div class="col col-md-4">
-        <div class="btn btn-outline-success btn-lg py-5 text-white">
+        <div class="btn btn-outline-success btn-lg py-5 text-white" onclick="location.href='ruleta.html'">
           <div class="card-body">
             <h3>Bet in Games</h3>
           </div>
