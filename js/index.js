@@ -1,5 +1,5 @@
-var options = ["$10", "$20", "$30", "$40", "$50", "$60", "$70",
-"$80", "$90", "$100", "$110", "$120", "Lose", "$130", "Lose", "$140", "$+1 Life",
+var options = ["10 S", "20 S", "30 S", "40 S", "50 S", "60 S", "70 S",
+"80 S", "90 S", "100 S", "110 S", "120 S", "Lose", "130 S", "Lose", "140 S", "+1 Life",
 "Lose"];
 
 // Initialize Variables
@@ -76,7 +76,7 @@ function dibujarRuleta() {
     }
 
     // Flecha, color y "movimiento".
-    optRuleta.fillStyle = "red";
+    optRuleta.fillStyle = "green";
     optRuleta.beginPath();
     optRuleta.moveTo(250 - 4, 250 - (outsideRadius + 5));
     optRuleta.lineTo(250 + 4, 250 - (outsideRadius + 5));
@@ -91,9 +91,9 @@ function dibujarRuleta() {
 }
 
 function Girar() {
-  GirarAngleStart = Math.random() * 10 + 10;
+  GirarAngleStart = Math.random() * 20 + 10;
   GirarTime = 0;
-  GirarTimeTotal = Math.random() * 3 + 4 * 1000;
+  GirarTimeTotal = Math.random() * 4 + 5 * 1000;
   rotarRuleta();
 }
 
