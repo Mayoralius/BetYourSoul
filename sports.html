@@ -5,14 +5,29 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <!-- Latest compiled and minified CSS -->
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style-sport.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- If the mobile does not use the standart web page-->
+    <script type="text/javascript">
+    //<![CDATA[
+    if((navigator.userAgent.match(/MSIE/i)) || (navigator.userAgent.match(/Googlebot/i)) || (navigator.userAgent.match(/Chrome/i)) || (navigator.userAgent.match(/Firefox/i))) {""} else {
+    document.write('<style type="text/css" media="screen">#sidebar,#menu{display:none;}#page{width:99%;}#content{width:99%;}</style>');}
+    //]]>
+    </script>
+
+    <link rel="stylesheet" media="screen" type="text/css" href="css/style-sport.css" />
+    <!-- To use this font when use a mobile dispositive -->
+    <style type="text/css">
+      @media handheld
+      body{width:98%;font-family:Verdana;font-size:16px;}
+    </style>
+
 
     <title>Bet Your Soul</title>
 </head>
@@ -29,7 +44,7 @@
         <a title="index" href="intro.html"><img src="img/logo.jpg" style="width: 60px; margin-top: 30px;" /></a>
         <span class="navbar-toggler-icon"></span>
         <div class="navbar navbar-dark">
-          <div class="container">
+          <div class="container col-md-12">
             <button type="button" class="btn navbar1 btn-default navbar-right">Options</button>
             <button type="button" class="btn navbar1 btn-default navbar-right">Register</button>
             <button type="button" class="btn navbar1 btn-default navbar-right">Login</button>
@@ -41,7 +56,7 @@
   <header>
     <section>
         <nav class="navbar navbar-inverse">
-          <div class="container nav1">
+          <div class="container nav1 col-md-12">
               <ul>
                   <li><a href="#">Apuestas Deportivas</a></li>
                   <li><a href="#">Apuestas Live</a></li>
