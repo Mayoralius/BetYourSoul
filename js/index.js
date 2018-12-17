@@ -1,5 +1,5 @@
-var options = ["$10", "$20", "$30", "$40", "$50", "$60", "$70",
-"$80", "$90", "$100", "$110", "$120", "Lose", "$130", "Lose", "$140", "$+1 Life",
+var options = ["10 S", "20 S", "30 S", "40 S", "50 S", "60 S", "70 S",
+"80 S", "90 S", "100 S", "110 S", "120 S", "Lose", "130 S", "Lose", "140 S", "+1 Life",
 "Lose"];
 
 // Initialize Variables
@@ -45,14 +45,14 @@ function dibujarRuleta() {
   var canvas = document.getElementById("canvas");
 
   if (canvas.getContext) {
-    var outsideRadius = 200;
-    var textRadius = 160;
-    var insideRadius = 125;
+    var outsideRadius = 250;
+    var textRadius = 190;
+    var insideRadius = 150;
     optRuleta = canvas.getContext("2d");
     optRuleta.clearRect(0,0,500,500);
     optRuleta.strokeStyle = "white";
     optRuleta.lineWidth = 2;
-    optRuleta.font = '14px Verdana, Arial';
+    optRuleta.font = '20px Verdana, Arial';
     for(var i = 0; i < options.length; i++) {
       var angle = inicioAngulo + i * arc;
       optRuleta.fillStyle = getColor2RGB(i, options.length);
@@ -76,7 +76,7 @@ function dibujarRuleta() {
     }
 
     // Flecha, color y "movimiento".
-    optRuleta.fillStyle = "red";
+    optRuleta.fillStyle = "white";
     optRuleta.beginPath();
     optRuleta.moveTo(250 - 4, 250 - (outsideRadius + 5));
     optRuleta.lineTo(250 + 4, 250 - (outsideRadius + 5));
@@ -91,9 +91,9 @@ function dibujarRuleta() {
 }
 
 function Girar() {
-  GirarAngleStart = Math.random() * 10 + 10;
+  GirarAngleStart = Math.random() * 20 + 10;
   GirarTime = 0;
-  GirarTimeTotal = Math.random() * 3 + 4 * 1000;
+  GirarTimeTotal = Math.random() * 4 + 5 * 1000;
   rotarRuleta();
 }
 
@@ -117,7 +117,7 @@ function detenerRotacionRuleta() {
   var arcd = arc * 180 / Math.PI;
   var index = Math.floor((360 - degrees % 360) / arcd);
   optRuleta.save();
-  optRuleta.font = 'bold 30px Verdana, Arial';
+  optRuleta.font = 'bold 45px Verdana, Arial';
   var text = options[index]
   optRuleta.fillText(text, 250 - optRuleta.measureText(text).width / 2, 250 + 10);
 
