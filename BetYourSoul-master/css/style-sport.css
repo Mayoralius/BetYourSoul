@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+
+}
+p {
+
+}
+
+body{
+  background-image: url(../img/fondo.jpg);
+}
+header {
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+
+}
+
+.navbar1{
+  background-origin: 0;
+  border-color: #1C802F;
+  color:  #48893F;
+  border-radius: 16px;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.navbar1:hover{
+  background: #227D4D;
+  color:#FFFFFF;
+}
+
+nav {
+  margin-left: auto;
+  margin-right: auto;
+  /* Desplazamos el nav hacia la izquierda */
+}
+nav ul {
+  list-style: none;
+  overflow: hidden;
+  left: all; /* Limpiamos errores de float */
+}
+nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+nav ul li a {
+  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+nav ul li:hover {
+  background: #227D4D;
+  color:#FFFFFF;
+}
+.contenido {
+  padding-top: 80px;
+}
+
+.sidebar{
+  position: fixed;
+  background: #2c2c2c;
+  color: aliceblue;
+  z-index: 1000;
+  top:150px;
+  bottom: 0;
+  padding: .5em;
+  overflow: hidden;
+  left: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.table1{
+  font-size-adjust: 10px;
+  background-color: #D8D6D6;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color:#010101;
+}
+.table1:hover{
+  background-color: #C8BFBF;
+  color:#010101;
+}
+
+

@@ -1,0 +1,314 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>BetYourSoul</title>
+  <!--ICONS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--SCRIPTS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <!--CUSTOM CSS-->
+  <link rel="stylesheet" href="css/style-index.css">
+  <!--BOOTSTRAP CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- If the mobile does not use the standart web page-->
+    <script type="text/javascript">
+    //<![CDATA[
+    if((navigator.userAgent.match(/MSIE/i)) || (navigator.userAgent.match(/Googlebot/i)) || (navigator.userAgent.match(/Chrome/i)) || (navigator.userAgent.match(/Firefox/i))) {""} else {
+    document.write('<style type="text/css" media="screen">#sidebar,#menu{display:none;}#page{width:99%;}#content{width:99%;}</style>');}
+    //]]>
+    </script>
+    <!-- Obtain the position of the user-->
+    <script>
+    (function(){
+  var content = document.getElementById("geolocation-test");
+
+  if (navigator.geolocation)
+  {
+    navigator.geolocation.getCurrentPosition(function(objPosition)
+    {
+      var lon = objPosition.coords.longitude;
+      var lat = objPosition.coords.latitude;
+
+      content.innerHTML = "<p><strong>Latitud:</strong> " + lat + "</p><p><strong>Longitud:</strong> " + lon + "</p>";
+
+    }, function(objPositionError)
+    {
+      switch (objPositionError.code)
+      {
+        case objPositionError.PERMISSION_DENIED:
+          content.innerHTML = "No se ha permitido el acceso a la posición del usuario.";
+        break;
+        case objPositionError.POSITION_UNAVAILABLE:
+          content.innerHTML = "No se ha podido acceder a la información de su posición.";
+        break;
+        case objPositionError.TIMEOUT:
+          content.innerHTML = "El servicio ha tardado demasiado tiempo en responder.";
+        break;
+        default:
+          content.innerHTML = "Error desconocido.";
+      }
+    }, {
+      maximumAge: 75000,
+      timeout: 15000
+    });
+  }
+  else
+  {
+    content.innerHTML = "Su navegador no soporta la API de geolocalización.";
+  }
+})();</script>
+
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <!-- GOOGLE TRADUCTOR SCRIPT -->
+    <div id="google_translate_element"></div><script type="text/javascript">
+  function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en,es,fr,it', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+  }
+  </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+      <a class="navbar-brand" href="intro.html">
+        <img src="img/logo.jpg" style="width: 20%;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="getMoreSouls.html">Get more Souls</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Options</a>
+          </li>
+          <li class="nav-item">
+            <img src="img/souls.png" style="width: 20px; height: 20px;"></img>
+            <a id="demo" class="nav-link" style="display: inline-block;">
+              0
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="background-overlay text-white py-5">
+      <div class="container">
+        <div class="row d-flex h-100">
+          <div class="col-sm-6 text-center justify-content-center align-self-center">
+            <h1>
+              To start playing you need to buy souls!
+            </h1>
+            <p>Elit reiciendis aspernatur obcaecati accusantium corporis? Mollitia eius ratione excepturi.</p>
+            <a href="#" class="btn btn-outline-success btn-lg text-white">
+              Start playing!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDER -->
+    <!--<section id="slide-wrap">
+        <section class="slider">
+            <ul class="slider1">
+                <li><img src="img/slider/slider1.jpg" alt=""></li>
+                <li><img src="img/slider/slider2.jpg" alt=""></li>
+                <li><img src="img/slider/slider3.jpg" alt=""></li>
+            </ul>
+        </section>
+    </section>-->
+  </header>
+
+  <!--SECTIONS-->
+  <section class="section1 py-5 bg-dark">
+    <div class="row">
+
+      <div class="col col-md-4">
+        <div class="btn btn-outline-success btn-lg py-5 text-white" onclick="location.href='betWithFriends.html'">
+          <div class="card-body">
+            <h3>Bet with Friends</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-md-4">
+        <div class="btn btn-outline-success btn-lg py-5 text-white" onclick="location.href='ruleta.html'">
+          <div class="card-body">
+            <h3>Bet in Games</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-md-4">
+       <div class="btn btn-outline-success btn-lg py-5 text-white" onclick="location.href='sports.html'">
+         <div class="card-body">
+           <h3>Bet in Sports/eSports</h3>
+         </div>
+       </div>
+     </div>
+
+    </div>
+  </section>
+
+  <!-- ACCORDION -->
+  <section class="section2">
+    <section class="container text-center p-5 bg-dark">
+      <div class="row">
+        <div class="accordion" id="accordionExample">
+          <div class="card" style="background-color: #009933;">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Bet with friends description
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                <img src="img/friends.jpg" align="left"></img>
+                At this mode, you can play to specific multiplayer games with other friends to gain Souls.
+                You can create your own game rules or select games already created.
+                Then choose your friends you want to challenge and bet a specific amount of Souls.
+                The winner will win all the Souls!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="background-color: #009933;">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Bet in games description
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                <img src="img/games.jpg" align="left" ></img>
+                At this mode you can play to single-player games like roulette or cards games in order to gain Souls, but you need to be lucky!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="background-color: #009933;">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Bet in Sports/eSports description
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                <img src="img/sports.jpg" align="left"></img>
+                You can use your Souls in this mode to bet in sports or eSports matches and multiply the amount of Souls you have. If you choose matches with a lower percentage of win, you will win a big amount of Souls!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <a class="navbar-brand" href="intro.html">
+        <img src="img/logo.jpg" style="width: 20%;">
+      </a>
+
+      <p class="footer-links">
+        <a href="#">Home</a>
+        ·
+        <a href="#">Blog</a>
+        ·
+        <a href="#">Pricing</a>
+        ·
+        <a href="#">About</a>
+        ·
+        <a href="#">Faq</a>
+        ·
+        <a href="#">Contact</a>
+      </p>
+
+      <p class="footer-company-name">BetYourSoul &copy; 2015</p>
+
+      <div class="footer-icons">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p>Contact Us</p>
+
+      <form action="#" method="post">
+
+        <input type="text" name="email" placeholder="Email" />
+        <textarea name="message" placeholder="Message"></textarea>
+        <button>Send</button>
+
+      </form>
+
+    </div>
+
+  </footer>
+  <!--SCRIPTS-->
+  <!--<script>
+            $(document).ready(function () {
+                $('.slider1').bxSlider({
+                    mode: 'fade',
+                });
+                $('.slider2').bxSlider({
+                    mode: 'fade',
+                });
+                $('.slider3').bxSlider({
+                    mode: 'fade',
+                });
+            });
+        </script>-->
+  <!--BOOTSTRAP JAVASCRIPT-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!--GOOGLE TRADUCTOR SCRIPT-->
+
+
+</body>
+
+</html>

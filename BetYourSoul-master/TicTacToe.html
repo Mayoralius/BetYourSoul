@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="author" content="Nj Subedi" />
+<meta name="http-equiv" content="charset: utf-8" />
+<meta name="description" content="Tic Tac Toe game developed using HTML and Javascript. Simple- commented and uncompressed." />
+<meta name="generator" content="Bluefish Editor (Ubuntu OS, Version 12.04 LTS)" />
+
+<title>Tic Tac Toe - HTML and Javascript</title>
+
+<link rel="stylesheet" href="css/style-TicTacToe.css">
+
+<script src="js/TicTacToeScript.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--SCRIPTS-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- If the mobile does not use the standart web page-->
+  <script type="text/javascript">
+  //<![CDATA[
+  if((navigator.userAgent.match(/MSIE/i)) || (navigator.userAgent.match(/Googlebot/i)) || (navigator.userAgent.match(/Chrome/i)) || (navigator.userAgent.match(/Firefox/i))) {""} else {
+  document.write('<style type="text/css" media="screen">#sidebar,#menu{display:none;}#page{width:99%;}#content{width:99%;}</style>');}
+  //]]>
+  </script>
+
+  <link rel="stylesheet" media="screen" type="text/css" href="css/style-sport.css" />
+  <!-- To use this font when use a mobile dispositive -->
+  <script>
+  function sumar (valor) {
+    var total = 0;
+    valor = parseInt(valor); // Convertir el valor a un entero (número).
+
+    total = document.getElementById('demo').innerHTML;
+
+    // Aquí valido si hay un valor previo, si no hay datos, le pongo un cero "0".
+    total = (total == null || total == undefined || total == "") ? 0 : total;
+
+    /* Esta es la suma. */
+    total = (parseInt(total) + parseInt(valor));
+
+    // Colocar el resultado de la suma en el control "span".
+    document.getElementById('demo').innerHTML = total;
+}
+  </script>
+  <title>Bet Your Soul</title>
+</head>
+<body background="../img/fondo.jpg" bgcolor="FFCECB">
+<div class="main">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- GOOGLE TRADUCTOR SCRIPT-->
+  <div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en,es,fr,it. ch', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div class="container">
+      <a title="index" href="intro.html"><img src="img/logo.jpg" style="width: 60px; margin-top: 10px;" /></a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="container col-md-12 col-sm-6">
+          <button type="button" class="btn navbar1 btn-default navbar-right">Options</button>
+          <button type="button" class="btn navbar1 btn-default navbar-right">Register</button>
+          <button type="button" class="btn navbar1 btn-default navbar-right">Login</button>
+          <button type="button" class="btn navbar1 btn-default navbar-right">Get more Souls</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </nav>
+<header>
+  <section>
+      <nav class="navbar navbar-inverse">
+        <div class="container nav1">
+            <ul>
+                <li><a href="#">Transfer Souls to the winner</a></li>
+                <li><a href="#" onclick="location.href='betWithFriends.html'">Return</a></li>
+                <li class="nav-item" style="list-style:none">
+                  <img src="img/souls.png" style="width: 20px; height: 20px;"></img>
+                  <a id="demo" class="nav-link" style="margin:11px 0 0 -15px;  display: inline-block; color:rgb(255, 255, 255);">
+                    999
+                  </a>
+                </li>
+            </ul>
+          </div>
+      </nav>
+  </section>
+</header>
+<!--Souls to bet With Player 2-->
+<form>
+    <input  class="form-control" placeholder="Enter Amount of Souls to Bet" style="margin: 50px 0 20px 300px; width: 480px;">
+    <input  class="form-control" placeholder="Enter the Username of the Player 2" style="margin: 0 0 20px 300px; width: 480px;">
+    <button type="button" onclick="myFunction(50)" class="btn btn-primary" style= "display: inline-block;margin: 0 0 0 300px;width: 480px;">Submit</button>
+  </form>
+
+	<div  style="background-color: #F5F5F5; margin: 50px 0 0 300px; border-radius: 10px; width: 480px;  overflow: hidden;">
+	<h1 style="border-bottom: 1px solid #CCC">Tic Tac Toe</h1>
+<div class="container">
+	<!-- initially hidden, shown when game starts -->
+	<div id="playground" style="overflow: hidden; display: none; clear: both; margin: 30px 0;">
+	    <h3 id="playerTurn"></h3>
+      <div class="container-fluid col-md-8">
+
+
+		<table class="checkboxTable" style="float: left;" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td id="box1"><input type="checkbox" id="inp1" onclick="this.disabled=true; checkThis(this);" /></td>
+				<td id="box2"><input type="checkbox" id="inp2" onclick="this.disabled=true; checkThis(this);" /></td>
+				<td id="box3"><input type="checkbox" id="inp3" onclick="this.disabled=true; checkThis(this);" /></td>
+			</tr>
+			<tr>
+				<td id="box4"><input type="checkbox" id="inp4" onclick="this.disabled=true; checkThis(this);" /></td>
+				<td id="box5"><input type="checkbox" id="inp5" onclick="this.disabled=true; checkThis(this);" /></td>
+				<td id="box6"><input type="checkbox" id="inp6" onclick="this.disabled=true; checkThis(this);" /></td>
+			</tr>
+			<tr>
+				<td id="box7"><input type="checkbox" id="inp7" onclick="this.disabled=true; checkThis(this);" /></td>
+				<td id="box8"><input type="checkbox" id="inp8" onclick="this.disabled=true; checkThis(this);" /></td>
+				<td id="box9"><input type="checkbox" id="inp9" onclick="this.disabled=true; checkThis(this);" /></td>
+			</tr>
+		</table>
+</div>
+
+		<table style="float: right; width: 300px; border: 1px solid #CCC;">
+			<tr>
+				<th width="20px">No.</th><th>Player's Name</th><th>Color</th>
+			</tr>
+			<tr>
+				<td>1.</td><td id="p1Name"></td><td id="p1Color"></td>
+			</tr>
+			<tr>
+				<td>2.</td><td id="p2Name"></td><td id="p2Color"></td>
+			</tr>
+		</table>
+
+	    <div style="clear:both; margin: 20px 0; float: right;">
+        	<button onClick="resetGame();" style="margin-left: 20px">Restart Game</button>
+	    </div>
+	</div>
+</div>
+	<!-- initially shown, hidden after game is started -->
+
+
+
+	<div id="playoptions" style=" margin: 30px 0;">
+	    <h4 style="margin-left: 20px">Choose your name and color to play with</h4>
+		<p style="margin-left: 20px">
+			Player-1
+			<input type="text" id="p1NameInput" value="Player One" onClick="this.select()" onChange="setPlayerName(1, this.value)" />
+			<select id="p1ColorInput" onChange="setPlayerColor(1, this.value);">
+				<option value="#CCCCFF" selected="selected">Light Blue</option>
+				<option value="#FF9900">Orange</option>
+				<option value="#FFCCCC">Light Red</option>
+				<option value="#660000">Brown</option>
+				<option value="#99CCFF">Sky Blue</option>
+				<option value="#CCFFCC">Light Green</option>
+				<option value="#FFCCFF">Pink</option>
+			</select>
+		</p>
+		<p style="margin-left: 20px">
+			Player-2
+			<input type="text" id="p2NameInput" value="Player Two" onClick="this.select()" onChange="setPlayerName(2, this.value)" />
+			<select id="p2ColorInput" onChange="setPlayerColor(2, this.value)">
+				<option value="#FFCCCC">Light Red</option>
+				<option value="#CCCCFF">Light Blue</option>
+				<option value="#FF9900">Orange</option>
+				<option value="#660000">Brown</option>
+				<option value="#99CCFF">Sky Blue</option>
+				<option value="#CCFFCC" selected="selected">Light Green</option>
+				<option value="#FFCCFF">Pink</option>
+			</select>
+		</p>
+		<p id="errBox" style="color: red;">
+
+		</p>
+		<p>
+			<button id="startButton" onClick="startGame()" style="margin-left: 20px">Start Game</button>
+			<button id="swapButton" onClick="swapValues()">Swap Players</button>
+		</p>
+	</div>
+
+
+	<div id="infobox" style="border-radius: 10px; margin: 50px 0 0 0; position:absolute;  width: 480px; height: 400px; overflow: auto; background-color: #F5F5F5;">
+	    <h2>Game Records</h2><button onClick="clearRecords();" style="margin-left: 20px">Clear Records</button>
+	</div>
+</div>
+
+	<script type="text/javascript">
+	    // actually, initializes the game with default values
+	    resetGame();
+	</script>
+</body>
+</html>
