@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 
 <html>
@@ -17,14 +17,17 @@
   <!--BOOTSTRAP CSS-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <!-- If the mobile does not use the standart web page-->
-    <script type="text/javascript">
+  <script type="text/javascript">
     //<![CDATA[
-    if((navigator.userAgent.match(/MSIE/i)) || (navigator.userAgent.match(/Googlebot/i)) || (navigator.userAgent.match(/Chrome/i)) || (navigator.userAgent.match(/Firefox/i))) {""} else {
-    document.write('<style type="text/css" media="screen">#sidebar,#menu{display:none;}#page{width:99%;}#content{width:99%;}</style>');}
+    if ((navigator.userAgent.match(/MSIE/i)) || (navigator.userAgent.match(/Googlebot/i)) || (navigator.userAgent.match(/Chrome/i)) || (navigator.userAgent.match(/Firefox/i))) {
+      ""
+    } else {
+      document.write('<style type="text/css" media="screen">#sidebar,#menu{display:none;}#page{width:99%;}#content{width:99%;}</style>');
+    }
     //]]>
-    </script>
-    <!-- Obtain the position of the user-->
-    <script>
+  </script>
+  <!-- Obtain the position of the user-->
+  <script>
     (function(){
   var content = document.getElementById("geolocation-test");
 
@@ -64,6 +67,14 @@
   }
 })();</script>
 
+<script>
+  var a = 0;
+  function myFunction(b) {
+    a = a + b;
+    document.getElementById("demo").textContent = a;
+  }
+</script>
+
 </head>
 
 <body>
@@ -71,12 +82,13 @@
   <!-- NAVIGATION -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-    <!-- GOOGLE TRADUCTOR SCRIPT -->
+    <!-- GOOGLE TRADUCTOR SCRIPT-->
     <div id="google_translate_element"></div><script type="text/javascript">
   function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en,es,fr,it', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
   }
   </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
     <div class="container">
       <a class="navbar-brand" href="intro.html">
@@ -88,7 +100,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="getMoreSouls.html">Get more Souls</a>
+            <a class="nav-link" href="#">Get more Souls</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Login</a>
@@ -111,128 +123,34 @@
   </nav>
 
   <!-- HEADER -->
-  <header class="main-header">
-    <div class="background-overlay text-white py-5">
-      <div class="container">
-        <div class="row d-flex h-100">
-          <div class="col-sm-6 text-center justify-content-center align-self-center">
-            <h1>
-              To start playing you need to buy souls!
-            </h1>
-            <p>Elit reiciendis aspernatur obcaecati accusantium corporis? Mollitia eius ratione excepturi.</p>
-            <a href="#" class="btn btn-outline-success btn-lg text-white">
-              Start playing!
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <header>
+    </header>
 
-    <!-- SLIDER -->
-    <!--<section id="slide-wrap">
-        <section class="slider">
-            <ul class="slider1">
-                <li><img src="img/slider/slider1.jpg" alt=""></li>
-                <li><img src="img/slider/slider2.jpg" alt=""></li>
-                <li><img src="img/slider/slider3.jpg" alt=""></li>
-            </ul>
-        </section>
-    </section>-->
-  </header>
-
-  <!--SECTIONS-->
-  <section class="section1 py-5 bg-dark">
-    <div class="row">
-
-      <div class="col col-md-4">
-        <div class="btn btn-outline-success btn-lg py-5 text-white" onclick="location.href='betWithFriends.html'">
-          <div class="card-body">
-            <h3>Bet with Friends</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="col col-md-4">
-        <div class="btn btn-outline-success btn-lg py-5 text-white" onclick="location.href='ruleta.html'">
-          <div class="card-body">
-            <h3>Bet in Games</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="col col-md-4">
-       <div class="btn btn-outline-success btn-lg py-5 text-white" onclick="location.href='sports.html'">
-         <div class="card-body">
-           <h3>Bet in Sports/eSports</h3>
-         </div>
-       </div>
-     </div>
-
-    </div>
-  </section>
-
-  <!-- ACCORDION -->
+  <!-- TABLE -->
   <section class="section2">
-    <section class="container text-center p-5 bg-dark">
-      <div class="row">
-        <div class="accordion" id="accordionExample">
-          <div class="card" style="background-color: #009933;">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Bet with friends description
-                </button>
-              </h5>
-            </div>
+    <section class="container text-center p-5 bg-dark" style="height: 1000px;">
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                <p>
-                <img src="img/friends.jpg" align="left"></img>
-                At this mode, you can play to specific multiplayer games with other friends to gain Souls.
-                You can create your own game rules or select games already created.
-                Then choose your friends you want to challenge and bet a specific amount of Souls.
-                The winner will win all the Souls!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="card" style="background-color: #009933;">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Bet in games description
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                <p>
-                <img src="img/games.jpg" align="left" ></img>
-                At this mode you can play to single-player games like roulette or cards games in order to gain Souls, but you need to be lucky!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="card" style="background-color: #009933;">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Bet in Sports/eSports description
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="card-body">
-                <p>
-                <img src="img/sports.jpg" align="left"></img>
-                You can use your Souls in this mode to bet in sports or eSports matches and multiply the amount of Souls you have. If you choose matches with a lower percentage of win, you will win a big amount of Souls!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <table class ="table table1" style="text-align-last: center; color:rgb(255, 255, 255);">
+          <tr class="danger"  >
+            <th><img src="img/souls-50.png" style="width: 100px; height: 100px;"></th>
+            <th><img src="img/souls-100.png" style="width: 100px; height: 100px;"></th>
+            <th><img src="img/souls-200.png" style="width: 100px; height: 100px;"></th>
+            <th><img src="img/souls-500.png" style="width: 100px; height: 100px;"></th>
+          </tr>
+          <tr>
+            <td>2.99$</td>
+            <td>5.99$</td>
+            <td>9.99$</td>
+            <td>19.99$</td>
+          </tr>
+          <tr>
+            <td><button type="button" class="btn btn-success" onclick="myFunction(50)">Buy</button></td>
+            <td><button type="button" class="btn btn-success" onclick="myFunction(100)">Buy</button></td>
+            <td><button type="button" class="btn btn-success" onclick="myFunction(200)">Buy</button></td>
+            <td><button type="button" class="btn btn-success" onclick="myFunction(500)">Buy</button></td>
+          </tr>
+      </table>
+
     </section>
   </section>
 

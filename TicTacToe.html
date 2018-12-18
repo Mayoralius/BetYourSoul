@@ -36,9 +36,23 @@
 
   <link rel="stylesheet" media="screen" type="text/css" href="css/style-sport.css" />
   <!-- To use this font when use a mobile dispositive -->
+  <script>
+  function sumar (valor) {
+    var total = 0;
+    valor = parseInt(valor); // Convertir el valor a un entero (número).
 
+    total = document.getElementById('demo').innerHTML;
 
+    // Aquí valido si hay un valor previo, si no hay datos, le pongo un cero "0".
+    total = (total == null || total == undefined || total == "") ? 0 : total;
 
+    /* Esta es la suma. */
+    total = (parseInt(total) + parseInt(valor));
+
+    // Colocar el resultado de la suma en el control "span".
+    document.getElementById('demo').innerHTML = total;
+}
+  </script>
   <title>Bet Your Soul</title>
 </head>
 <body background="../img/fondo.jpg" bgcolor="FFCECB">
@@ -75,6 +89,12 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'd
             <ul>
                 <li><a href="#">Transfer Souls to the winner</a></li>
                 <li><a href="#" onclick="location.href='betWithFriends.html'">Return</a></li>
+                <li class="nav-item" style="list-style:none">
+                  <img src="img/souls.png" style="width: 20px; height: 20px;"></img>
+                  <a id="demo" class="nav-link" style="margin:11px 0 0 -15px;  display: inline-block; color:rgb(255, 255, 255);">
+                    0
+                  </a>
+                </li>
             </ul>
           </div>
       </nav>
@@ -82,16 +102,10 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'd
 </header>
 <!--Souls to bet With Player 2-->
 <form>
-  <div class="form-row">
-    <div class="form-group col-md-2">
-    <input  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Amount of Souls">
-    <button type="submit " class="btn btn-primary">Submit</button>
-    </div>
-     </div>
+    <input  class="form-control" placeholder="Enter Amount of Souls to Bet" style="margin: 50px 0 20px 300px; width: 480px;">
+    <input  class="form-control" placeholder="Enter the Username of the Player 2" style="margin: 0 0 20px 300px; width: 480px;">
+    <button type="button" onclick="myFunction(50)" class="btn btn-primary" style= "display: inline-block;margin: 0 0 0 300px;width: 480px;">Submit</button>
   </form>
-
-<div class="row">
-
 
 	<div  style="background-color: #F5F5F5; margin: 50px 0 0 300px; border-radius: 10px; width: 480px;  overflow: hidden;">
 	<h1 style="border-bottom: 1px solid #CCC">Tic Tac Toe</h1>
@@ -134,7 +148,7 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'd
 		</table>
 
 	    <div style="clear:both; margin: 20px 0; float: right;">
-        	<button onClick="resetGame();">Restart Game</button>
+        	<button onClick="resetGame();" style="margin-left: 20px">Restart Game</button>
 	    </div>
 	</div>
 </div>
@@ -143,8 +157,8 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'd
 
 
 	<div id="playoptions" style=" margin: 30px 0;">
-	    <h4>Choose your name and color to play with</h4>
-		<p>
+	    <h4 style="margin-left: 20px">Choose your name and color to play with</h4>
+		<p style="margin-left: 20px">
 			Player-1
 			<input type="text" id="p1NameInput" value="Player One" onClick="this.select()" onChange="setPlayerName(1, this.value)" />
 			<select id="p1ColorInput" onChange="setPlayerColor(1, this.value);">
@@ -157,7 +171,7 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'd
 				<option value="#FFCCFF">Pink</option>
 			</select>
 		</p>
-		<p>
+		<p style="margin-left: 20px">
 			Player-2
 			<input type="text" id="p2NameInput" value="Player Two" onClick="this.select()" onChange="setPlayerName(2, this.value)" />
 			<select id="p2ColorInput" onChange="setPlayerColor(2, this.value)">
@@ -174,13 +188,13 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'd
 
 		</p>
 		<p>
-			<button id="startButton" onClick="startGame()">Start Game</button>
+			<button id="startButton" onClick="startGame()" style="margin-left: 20px">Start Game</button>
 			<button id="swapButton" onClick="swapValues()">Swap Players</button>
 		</p>
 	</div>
 
 
-	<div id="infobox" style="border-radius: 10px; margin: 50px 0 0 300px; position:absolute; width: 240px; height: 400px; overflow: auto; background-color: #F5F5F5;">
+	<div id="infobox" style="border-radius: 10px; margin: 50px 0 0 0; position:absolute;  width: 480px; height: 400px; overflow: auto; background-color: #F5F5F5;">
 	    <h2>Game Records</h2><button onClick="clearRecords();" style="margin-left: 20px">Clear Records</button>
 	</div>
 </div>
