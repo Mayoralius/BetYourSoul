@@ -12,6 +12,7 @@ html,body {
 .main{
 	background-image: url(../img/fondo.jpg);
 	overflow: hidden;
+	height: 950px;
 }
 
 .color1 {
